@@ -12,7 +12,8 @@
         "start2": "ts-node src/index.ts",
         "lint": "eslint . --ext .ts",
         "lint-and-fix": "eslint . --ext .ts --fix",
-        "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write"
+        "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
+        "create:migration": "mikro-orm migration:create"
     },
     "keywords": [],
     "author": "",
