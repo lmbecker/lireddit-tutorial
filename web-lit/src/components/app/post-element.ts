@@ -19,8 +19,6 @@ import shared from '../shared.css';
 export class PostElement extends ApolloQuery<Data, Variables> {
   @property({ attribute: 'post-id', type: Number }) postId: number;
 
-  static readonly is = 'apollo-app';
-
   static readonly style = [shared, style];
 
   query = PostQuery;
@@ -48,10 +46,7 @@ export class PostElement extends ApolloQuery<Data, Variables> {
     return html`
     <label for="postid">Post ID</label>
     <input @change=${(e: Event) => this.updatePostID(e)} id ="postid" type="number" value=${this.postId?.toString()}></input>
-      <dl>
-        <dt>username</dt>
-        <dd>${this.data?.post?.title ?? '/'}</dd>
-      </dl>
+    <p>title: ${this.data?.post?.title ?? '/'}</p>
     `;
   }
 }
