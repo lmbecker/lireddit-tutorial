@@ -14,7 +14,6 @@ import PostQuery from '../../graphql/queries/post.query.graphql';
 
 import style from './app.css';
 import shared from '../shared.css';
-import { HTMLInputElement } from '@ungap/global-this';
 
 @customElement('post-element')
 export class PostElement extends ApolloQuery<Data, Variables> {
